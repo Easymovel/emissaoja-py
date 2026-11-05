@@ -1,6 +1,7 @@
 """Integração com o sandbox público (Emissor Nacional simulado). Só roda com EMISSAOJA_TEST_KEY (chave ej_test_)."""
 
 import os
+import random
 import sys
 import time
 import unittest
@@ -20,7 +21,7 @@ class SandboxTest(unittest.TestCase):
             ej.empresa.conectar("11111111000191", "qualquer")
             ej.empresa.aguardar_credencial(timeout=60)
         tomador = ej.tomadores.criar("12345678000195")["tomador"]
-        pedido = ej.notas.emitir(f"sdk-py-{int(time.time())}", tomador["tipo"], tomador["id"], 10, descricao="Teste do cliente Python")["pedido"]
+        pedido = ej.notas.emitir(f"sdk-py-{int(time.time())}", tomador["tipo"], tomador["id"], random.randint(10001, 19999) / 100, descricao="Teste do cliente Python")["pedido"]
         final = ej.notas.aguardar(pedido["id"], timeout=120)["pedido"]
         self.assertIn(final["estado"], ("autorizada", "recusada", "incerta"))
         if final["estado"] == "autorizada":
