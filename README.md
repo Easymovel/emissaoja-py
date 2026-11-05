@@ -141,7 +141,9 @@ except EmissaojaErro as e:
 | 401 | `chave_invalida` | Conferir a chave (ou o ambiente: `ej_test_` só no sandbox) |
 | 402 | `limite_notas` | Limite do plano no mês |
 | 404 | `tomador_nao_encontrado`, `servico_nao_encontrado`, `nota_nao_encontrada`, `pedido_nao_encontrado` | Conferir o id |
-| 409 | `sem_empresa`, `aceite_pendente`, `possivel_duplicada`, `emissao_repetida_recente`, `incerta_pendente` | Ver a seção acima |
+| 409 | `sem_empresa` | Conectar a empresa (`empresa.conectar`) |
+| 409 | `aceite_pendente` | Termos ou Política mudaram: entre no [app](https://emissaoja.com.br/app) e aceite a versão nova; a chave volta a funcionar |
+| 409 | `possivel_duplicada`, `emissao_repetida_recente`, `incerta_pendente` | Ver "Idempotência e nota em dobro" |
 | 422 | `nota_bloqueada` | Resolver `extras["bloqueios"]` |
 | 429 | `rate_limited` | Esperar `Retry-After` |
 | 503 | `motor_indisponivel`, `fila_indisponivel`, `receita_indisponivel` | Tentar de novo (com a mesma referência) |
