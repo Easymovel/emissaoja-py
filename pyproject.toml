@@ -1,0 +1,70 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "emissaoja"
+version = "0.1.0"
+description = "API de NFS-e nacional para Python: emita nota fiscal de serviço eletrônica no Emissor Nacional sem certificado digital (MEI e Simples Nacional). PDF, XML, tomadores. Cliente oficial do emissaoja."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "BINOBO LTDA" }]
+keywords = [
+  "nfse",
+  "nfs-e",
+  "nfse nacional",
+  "api nfse",
+  "emitir nfse",
+  "nota fiscal",
+  "nota fiscal de servico",
+  "nota fiscal eletronica",
+  "emissor nacional",
+  "danfse",
+  "sem certificado digital",
+  "mei",
+  "simples nacional",
+  "iss",
+  "brasil",
+  "brazil",
+  "invoice",
+  "emissaoja",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: Portuguese (Brazilian)",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Office/Business :: Financial :: Accounting",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://emissaoja.com.br"
+Documentation = "https://emissaoja.com.br/docs/"
+Source = "https://github.com/Easymovel/emissaoja-py"
+Changelog = "https://github.com/Easymovel/emissaoja-py/blob/main/CHANGELOG.md"
+Issues = "https://github.com/Easymovel/emissaoja-py/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/emissaoja"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/src/emissaoja",
+  "/tests",
+  "/README.md",
+  "/CHANGELOG.md",
+  "/LICENSE",
+  "/pyproject.toml",
+]
