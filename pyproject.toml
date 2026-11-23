@@ -51,8 +51,8 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Homepage = "https://emissaoja.com.br"
-Documentation = "https://emissaoja.com.br/docs/"
+Homepage = "https://emissaoja.com.br/?origem=lib-pypi&utm_source=pypi&utm_medium=pacote&utm_campaign=home"
+Documentation = "https://emissaoja.com.br/docs/?origem=lib-pypi&utm_source=pypi&utm_medium=pacote&utm_campaign=docs"
 Source = "https://github.com/Easymovel/emissaoja-py"
 Changelog = "https://github.com/Easymovel/emissaoja-py/blob/main/CHANGELOG.md"
 Issues = "https://github.com/Easymovel/emissaoja-py/issues"
